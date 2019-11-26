@@ -8,7 +8,7 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-     <div id="navbar" class="navbar-fixed scrollspy">
+     <!--div id="navbar" class="navbar-fixed scrollspy">
   <nav class="blue darken-4">
     <div class="nav-wrapper container">
     	<div class="container"> <a href="/" class="brand-logo">Sass3r</a></div>
@@ -32,9 +32,23 @@
       </ul>
     </div>
   </nav>
-  </div>
- 
-  <%= yield %>
+  </div>-->
+     <div class="navbar-fixed scrollspy">
+     <nav>
+       <div class="nav-wrapper blue darken-4">
+         <a href="#" class="brand-logo">DevSecurity</a>
+         <ul id="nav-mobile" class="right hide-on-med-and-down side-nav">
+           <li><a href="/">Inicio</a></li>
+           <li><a href="/hackingzone">Programacion</a></li>
+           <li><a href="/malware">Hacking</a></li>
+           <li><a href="#">Acerca de mi</a></li>
+         </ul>
+       </div>
+     </nav>
+     </div>
+
+
+     <%= yield %>
 
   <footer class="page-footer blue darken-4">
     <div class="container">
