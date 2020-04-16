@@ -1,0 +1,17 @@
+<h1>Nueva Publicacion</h1>
+<%= form_with scope: :post, local: true do |form| %>
+  <p>
+	<%= form.label :title %><br>
+	<%= form.text_field :title %>
+  </p>
+
+  <p>
+	<%= form.label :content %><br>
+	<%= form.text_area :content %>
+  </p>
+  <p>
+        <%= form.submit %>
+  </p>
+<% end %>
+
+
