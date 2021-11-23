@@ -33,6 +33,14 @@ gem 'materialize-sass'
 gem 'material_icons'
 #Postgresql gem
 gem 'pg'
+#devise
+gem 'devise'
+#draper
+gem 'draper'
+#redcarpet
+gem 'redcarpet'
+#coderay
+gem 'coderay'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password

@@ -27,18 +27,24 @@
 		<div class="col s12 m10 offset-m1 l9 offset-l1">
 			
 			
-			
-                <div class="post-preview">
-                    <a href="#">
-                        <h4 class="post-title titleFont">
-                           Hola Mundo
-                        </h4>
-                        <h6 class="post-subtitle subTitleFont">
-                           El blog esta en linea!
-                        </h6>
-                    </a>
-                   <p class="post-meta"><i class="fa fa-clock-o"></i> 1 days ago by <a href="#">Rafael</a></p>
-                </div>
+    <ul>
+    <% @posts.each do |post| %>
+      <li>
+      <div class="post-preview">
+      <a href="posts/<%= post.id %>/">
+          <h4 class="post-title titleFont">
+             <%= post.title %>
+          </h4>
+          <h6 class="post-subtitle subTitleFont">
+          </h6>
+      </a>
+     <p class="post-meta"><i class="fa fa-clock-o"></i> <%= post.created_at %> escrito por:  <a href="#">Rafael</a></p>
+     </div>
+     </li>
+
+    <% end %>
+    </ul>
+  
                 <hr>
                
                      <div class="row">

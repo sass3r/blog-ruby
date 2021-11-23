@@ -46,6 +46,29 @@
          </div>
        </nav>
      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="notificationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered" role="document">
+	  <div class="modal-content">
+	    <div class="modal-header">
+	      <h5 class="modal-title" id="exampleModalLongTitle">Actualizacion</h5>
+	      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+		<span aria-hidden="true">&times;</span>
+	      </button>
+	    </div>
+	    <div class="modal-body">
+	      <p id="message"></p>
+	    </div>
+	    <div class="modal-footer">
+	      <button type="button" class="btn btn-secondary blue darken-4" data-dismiss="modal">Cerrar</button>
+	      <button id="restart-button" type="button" class="btn btn-primary blue darken-4" onClick="restartApp()">Aceptar</button>
+	    </div>
+	  </div>
+	</div>
+      </div>
+    <!-- end modal-->
+
   <%= yield %>
 
   <footer class="page-footer indigo darken-4">
@@ -54,6 +77,11 @@
               <div class="col s12 l4 m10">
                 <h5 class="white-text">Suscribete</h5>
                 <p class="white-text">Te mantendre informado de cada publicacion.</p>
+                <%= form_with(url: "/subscribers/new", method: "post") do %>
+                  <%= label_tag(:q, "Email: ") %>
+                  <%= text_field_tag(:q) %>
+                  <%= submit_tag("Subscribirme") %>
+                <% end %>
 			     <form>
 			    
 			      <div class="input-field">
@@ -73,7 +101,7 @@
               <div id="categories" class="col l3 offset-l1 s12 m8">
                 <h5 class="white-text">Categorias</h5>
                 <ul>
-                  <li><a class="grey-text text-lighten-3" href="arduino/index.html">Arduino</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#">Arduino</a></li>
                   <li><a class="grey-text text-lighten-3" href="#!">Hacking</a></li>
                   <!--<li><a class="grey-text text-lighten-3" href="#!">Category3</a></li>
 		  <li><a class="grey-text text-lighten-3" href="#!">Category4</a></li>-->
@@ -85,7 +113,7 @@
               <div class="col l3 s12 m8">
                 <h5 class="white-text">Archivos</h5>
                 <ul>
-                  <li><a class="grey-text text-lighten-3" href="#!">Mayo 2017</a></li>
+                    <li><a class="grey-text text-lighten-3" href="#!">Mayo 2020</a></li>
                   <!--<li><a class="grey-text text-lighten-3" href="#!">April 2015</a></li>
                   <li><a class="grey-text text-lighten-3" href="#!">May 2015</a></li>
 		  <li><a class="grey-text text-lighten-3" href="#!">June 2015</a></li>-->
@@ -107,7 +135,7 @@
           </div><!--conatiner-->
     <div class="footer-copyright">
       <div class="container">
-	      Rafael Ramirez<span class="copyleft">&copy</span> 2017
+	      Rafael Ramirez<span class="copyleft">&copy</span> 2020
        <br>
       </div>
     </div>
