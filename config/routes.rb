@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :posts
     post '/posts/new', to: 'posts#create'
     post '/subscribers/new', to: 'subscriber#create'
+    get 'subscribers/verify', to: 'subscriber#verify'
     devise_for :users
 
 end

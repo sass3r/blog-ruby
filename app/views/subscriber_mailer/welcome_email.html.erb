@@ -6,7 +6,7 @@
   <body>
     <h1>Bienvenido a devsec.ml, <%= @subscriber.email %></h1>
     <p>
-      Para confirmar su correo electronico, solo siga el siguiente enlace: <%= @url %>.
+      Para confirmar su correo electronico, solo siga el siguiente enlace: <%= link_to "Confirmar Correo",  "http://blog.cryptostore.com.bo/subscribers/verify?token="+@subscriber.register_token %>.
     </p>
     <p>
       Gracias por suscribirte que tengas un gran dia!
